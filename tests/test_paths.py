@@ -132,7 +132,8 @@ class PathSafetyTests(unittest.TestCase):
                 batch_id="synthetic-second",
             )
             manifest = json.loads(first.manifest.read_text(encoding="utf-8"))
-            manifest["paths"]["ocr"] = second.ocr.relative_to(workspace).as_posix()
+            second_manifest = json.loads(second.manifest.read_text(encoding="utf-8"))
+            manifest["paths"]["ocr"] = second_manifest["paths"]["ocr"]
             first.manifest.write_text(
                 json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
                 encoding="utf-8",

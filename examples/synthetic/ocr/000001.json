@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "source_image": "data/contacts/synthetic-contact/batches/2040-01-01_2040-01-02/synthetic-batch/screenshots/000001.png",
+  "source_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+  "image_size": [1000, 800],
+  "engine": "paddle",
+  "items": [
+    {
+      "index": 1,
+      "text": "Synthetic repeated message",
+      "confidence": 0.98,
+      "bbox": [[50, 100], [300, 100], [300, 140], [50, 140]]
+    }
+  ]
+}

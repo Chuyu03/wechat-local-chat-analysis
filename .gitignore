@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Runtime workspaces and sensitive outputs
+/data/
+/outputs/
+/analysis_reports/
+/workspace/
+/screenshots/
+/models/
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# Models and generated inference artifacts
+*.onnx
+*.pdmodel
+*.pdparams
+*.pdiparams
+*.pdiparams.info
+
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# Local agent and editor state
+.codex/
+.agents/
+.idea/
+.vscode/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+

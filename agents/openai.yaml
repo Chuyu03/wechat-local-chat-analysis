@@ -1,0 +1,7 @@
+interface:
+  display_name: "WeChat Local Chat Analysis"
+  short_description: "Build local OCR evidence for authorized WeChat chats"
+  default_prompt: "Use $wechat-local-chat-analysis to build local evidence from authorized WeChat screenshots and apply privacy gates before model analysis."
+
+policy:
+  allow_implicit_invocation: true

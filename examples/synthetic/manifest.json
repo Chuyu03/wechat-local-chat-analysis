@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "contact_display": "Synthetic Contact",
+  "contact_slug": "synthetic-contact",
+  "start_date": "2040-01-01",
+  "end_date": "2040-01-02",
+  "batch_id": "synthetic-batch",
+  "capture": {
+    "screenshots": [
+      {
+        "file": "data/contacts/synthetic-contact/batches/2040-01-01_2040-01-02/synthetic-batch/screenshots/000001.png",
+        "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      {
+        "file": "data/contacts/synthetic-contact/batches/2040-01-01_2040-01-02/synthetic-batch/screenshots/000002.png",
+        "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+      }
+    ]
+  },
+  "ocr": {
+    "requested_device": "auto",
+    "actual_device": "cpu",
+    "fallback_reason": "synthetic demonstration: GPU unavailable",
+    "framework_version": "synthetic-version",
+    "package_version": "synthetic-version"
+  }
+}

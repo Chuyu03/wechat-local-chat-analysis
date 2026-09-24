@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wechat-local-chat-analysis"
+version = "0.1.0"
+description = "Privacy-first local capture, OCR, normalization, and review tooling for authorized PC WeChat chats."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Chuyu03" }]
+keywords = ["codex-skill", "wechat", "ocr", "privacy", "local-first"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Win32 (MS Windows)",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows :: Windows 10",
+  "Operating System :: Microsoft :: Windows :: Windows 11",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+capture = [
+  "Pillow>=10,<13",
+  "PyAutoGUI>=0.9.54,<1",
+]
+ocr = [
+  "Pillow>=10,<13",
+  "paddleocr>=3,<4",
+]
+
+[project.scripts]
+wechat-local-chat-analysis = "wechat_analyse.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

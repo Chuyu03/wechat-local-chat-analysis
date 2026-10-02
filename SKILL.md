@@ -22,7 +22,8 @@ Analyze only conversations the user is authorized to access. Keep the workflow l
 1. For scoping and authorized collection, read [references/capture-workflow.md](references/capture-workflow.md).
 2. For CLI use and the end-to-end local workflow, read [references/local-pipeline.md](references/local-pipeline.md).
 3. Before interpreting or exporting data, read [references/data-contract.md](references/data-contract.md).
-4. Read [references/external-review.md](references/external-review.md) only when the user asks to prepare or send material to an online service.
+4. For a semantic summary or analytical report, read [references/analysis-reporting.md](references/analysis-reporting.md) after normalization and evidence review.
+5. Read [references/external-review.md](references/external-review.md) only when the user asks to prepare or send material to an online service.
 
 ## Default workflow
 
@@ -32,7 +33,7 @@ Analyze only conversations the user is authorized to access. Keep the workflow l
 4. Run `capture`, verify every registered screenshot, the date boundaries, continuity, and absence of unrelated content, and only then run `ocr --acknowledge-capture-coverage`. The flag confirms that separate human/agent coverage review; it is not inferred from capture completion.
 5. Run `normalize`. Use normalized JSONL as the main analysis input; use screenshots and raw OCR as evidence for review.
 6. Use the review CSV as a checklist for low-confidence and ambiguous items. Record verified corrections in the analysis notes; the CSV is not imported back into JSONL. Then run `report` to create the raw local evidence index.
-7. Read the normalized JSONL locally and produce the requested semantic summary together with evidence limits, unresolved items, and the authorized scope. Do not represent the CLI evidence report as a complete semantic analysis.
+7. Before semantic analysis, read [references/analysis-reporting.md](references/analysis-reporting.md). Then read the normalized JSONL locally and produce the requested summary with claim-level provenance, evidence limits, unresolved items, and the authorized scope. Do not represent the CLI evidence report as a complete semantic analysis.
 
 ## Analysis rules
 

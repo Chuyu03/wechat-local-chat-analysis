@@ -75,7 +75,7 @@ Recommended sequence:
 3. Before `capture`, verify the official WeChat conversation and choose a rectangle containing only the chat pane. The command binds to the approved foreground WeChat process, screenshots that region, and scrolls it; it interrupts if the foreground identity changes. Close unrelated windows and be ready to stop.
 4. Complete and verify every registered screenshot, the date boundaries, continuity, and absence of unrelated content; only then run `ocr --acknowledge-capture-coverage`.
 5. Run `normalize`, use the review CSV as a checklist for consequential or low-confidence items, and record verified corrections in the analysis notes; the CSV is not automatically imported back into JSONL. Then run `report` for the raw evidence index.
-6. Read the normalized JSONL locally for the requested semantic summary; `report` is an evidence index, not a substitute for that analysis.
+6. Read the normalized JSONL locally for the requested semantic summary and follow the [evidence-aware analysis guide](references/analysis-reporting.md); `report` is an evidence index, not a substitute for that analysis.
 7. Keep the artifacts local. If external review is needed, use `prepare-online-review` to create a local candidate, redact it manually, inspect the exact result, and then obtain separate approval for any upload.
 
 For the installed version's exact arguments, use `<command> --help`. Detailed operating guidance is in [the local pipeline reference](references/local-pipeline.md).
@@ -187,7 +187,7 @@ python -m wechat_analyse --help
 3. 运行 `capture` 前，确认官方微信中的正确会话，并选择只包含聊天区域的矩形。该命令会绑定已确认的前台微信进程、截图所选区域并滚动；前台窗口身份变化时会中断。请关闭无关窗口并随时准备停止。
 4. 核验每张已登记截图、日期首尾、连续性和无关内容后，才运行 `ocr --acknowledge-capture-coverage`。
 5. 运行 `normalize`，把复核 CSV 作为重要或低置信度项目的检查清单，并在分析笔记中记录核验后的修正；CSV 不会自动回写 JSONL。随后运行 `report` 生成原始证据索引。
-6. 在本地读取规范化 JSONL 生成用户所需的语义总结；`report` 只是证据索引，不能代替语义分析。
+6. 在本地读取规范化 JSONL，并按[证据感知分析指南](references/analysis-reporting.md)生成用户所需的语义总结；`report` 只是证据索引，不能代替语义分析。
 7. 默认保持本地处理。如确需外部复核，先用 `prepare-online-review` 生成本地候选包，再手动脱敏并核对最终范围；任何上传仍需单独明确批准。
 
 安装版本的精确参数以各命令的 `--help` 为准。更多说明见[本地流程](references/local-pipeline.md)、[采集规范](references/capture-workflow.md)、[数据契约](references/data-contract.md)和[外部复核确认门](references/external-review.md)。
